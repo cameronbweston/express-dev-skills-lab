@@ -21,8 +21,8 @@ function index(req, res) {
   function show(req, res) {
     skillsDB.findById(req.params.id, function(error, skills) {
       res.render('skills/show', {
-        skill,
-        error
+        skill: skills,
+        error: error
       })
     })
   }
